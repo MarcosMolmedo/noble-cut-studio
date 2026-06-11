@@ -1,0 +1,173 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  width: 100%;
+
+  background: rgba(17, 17, 17, 0.82);
+
+  backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header__nav {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+}
+
+.header__logo-main {
+  color: var(--color-cream);
+
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.header__logo-sub {
+  margin-top: 0.15rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+}
+
+.header__toggle {
+  width: 2.6rem;
+  height: 2.6rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+
+  border-radius: 999px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.28rem;
+
+  cursor: pointer;
+}
+
+.header__toggle-line {
+  width: 1rem;
+  height: 1px;
+
+  background: var(--color-cream);
+
+  transition: 0.3s ease;
+}
+
+.header__menu {
+  position: absolute;
+
+  top: 100%;
+  left: 1rem;
+  right: 1rem;
+
+  padding: 1.5rem;
+
+  background: rgba(17, 17, 17, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  transition: 0.3s ease;
+}
+
+.header__menu--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header__link {
+  color: var(--color-cream);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  transition: 0.3s ease;
+}
+
+.header__link:hover {
+  color: var(--color-gold);
+}
+
+.header__button {
+  width: fit-content;
+
+  padding: 0.9rem 1.2rem;
+
+  background: var(--color-gold);
+
+  color: var(--color-black);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  border-radius: 0.2rem;
+
+  transition: 0.3s ease;
+}
+
+.header__button:hover {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 900px) {
+  .header__toggle {
+    display: none;
+  }
+
+  .header__menu {
+    position: static;
+
+    padding: 0;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: none;
+
+    background: transparent;
+    border: none;
+
+    flex-direction: row;
+    align-items: center;
+
+    gap: 2rem;
+  }
+}

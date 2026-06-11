@@ -1,0 +1,136 @@
+.booking {
+  width: 100%;
+  padding: 4rem 1.25rem;
+  background-color: var(--color-black);
+  color: var(--color-cream);
+}
+
+.booking__container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.booking__content {
+  max-width: 560px;
+}
+
+.booking__label {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.booking__title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.1rem, 8vw, 4rem);
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--color-cream);
+}
+
+.booking__text {
+  max-width: 430px;
+  margin: 1.2rem 0 1.8rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(247, 243, 237, 0.78);
+}
+
+.booking__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.85rem 1.45rem;
+  border: 1px solid var(--color-gold);
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.booking__button:hover {
+  transform: translateY(-3px);
+  background-color: transparent;
+  color: var(--color-gold);
+}
+
+.booking__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+.booking__feature {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 237, 0.7);
+}
+
+.booking__feature::before {
+  content: "•";
+  margin-right: 0.45rem;
+  color: var(--color-gold);
+}
+
+.booking__image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(198, 161, 91, 0.22);
+  background-color: #000;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.booking__image {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.booking__image-wrapper:hover .booking__image {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .booking {
+    padding: 5rem 2rem;
+  }
+
+  .booking__container {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 4rem;
+  }
+
+  .booking__image {
+    height: 390px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .booking {
+    padding: 5.5rem 2rem;
+  }
+
+  .booking__image {
+    height: 430px;
+  }
+}
