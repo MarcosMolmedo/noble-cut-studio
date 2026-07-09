@@ -4,6 +4,7 @@ const Experience = () => {
   return (
     <section className="experience" id="experience">
       <div className="experience__container">
+
         <div className="experience__content">
           <span className="experience__label">Experience</span>
 
@@ -25,27 +26,39 @@ const Experience = () => {
           </ul>
         </div>
 
-        <div className="experience__gallery" aria-label="Barber studio experience">
-          <img
-            src="/images/experience-chair.jpg"
-            alt="Premium barber chair in a dark studio"
-            className="experience__image experience__image--large"
-          />
-
-          <div className="experience__side-images">
+        <div
+          className="experience__gallery"
+          aria-label="Premium barber experience"
+        >
+          <div className="experience__image-wrapper experience__image-wrapper--large">
             <img
-              src="/images/experience-coffee.jpg"
-              alt="Coffee served during the barber experience"
-              className="experience__image"
-            />
-
-            <img
-              src="/images/experience-products.jpg"
-              alt="Premium grooming products"
+              src="/images/experience-chair.jpg"
+              alt="Luxury barber chair"
               className="experience__image"
             />
           </div>
+
+          <div className="experience__side-images">
+
+            <div className="experience__image-wrapper">
+              <img
+                src="/images/experience-coffee.jpg"
+                alt="Coffee served to clients"
+                className="experience__image"
+              />
+            </div>
+
+            <div className="experience__image-wrapper">
+              <img
+                src="/images/experience-products.jpg"
+                alt="Premium barber products"
+                className="experience__image"
+              />
+            </div>
+
+          </div>
         </div>
+
       </div>
     </section>
   );
